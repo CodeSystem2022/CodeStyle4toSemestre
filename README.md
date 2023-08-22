@@ -1,7 +1,7 @@
 # CodeStyle 4to Semestre
 Repositorio de tareas cuarto semestre 2023 .
 <hr>
-[![Sin-t-tulo-2.jpg](https://i.postimg.cc/FHnZZbcT/Sin-t-tulo-2.jpg)](https://postimg.cc/k2KKMbTS)
+
 
 <ul>
 <h2>Integrantes: </h2>

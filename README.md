@@ -27,3 +27,11 @@ Repositorio de tareas cuarto semestre 2023 .
     <td>Ivana Germir</td>
   </tr>
   <tr>
+    <td>Sprint 2</td>
+    <td>Ivana Germir</td>
+  </tr>
+     <tr>
+    <td>Sprint 3</td>
+    <td>Florencia Oviedo</td>
+  </tr>
+  </table>

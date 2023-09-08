@@ -2,6 +2,7 @@
 Repositorio de tareas cuarto semestre 2023 .
 <hr>
 
+![github utn](https://github.com/CodeSystem2022/CodeStyle3erSemestre/blob/main/asets/Make%20your%20README.png)
 
 <ul>
 <h2>Integrantes: </h2>
@@ -26,3 +27,11 @@ Repositorio de tareas cuarto semestre 2023 .
     <td>Ivana Germir</td>
   </tr>
   <tr>
+    <td>Sprint 2</td>
+    <td>Ivana Germir</td>
+  </tr>
+     <tr>
+    <td>Sprint 3</td>
+    <td>Florencia Oviedo</td>
+  </tr>
+  </table>

@@ -18,8 +18,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 
-
-@Entity
 public class Estudiante {
     
     @Id

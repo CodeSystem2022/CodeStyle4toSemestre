@@ -17,6 +17,7 @@ app.get("/", function (req, res) {
 	res.status(200).sendFile("index.html");
 });
 
+
 app.post("/create_preference", (req, res) => {
 
 	let preference = {
@@ -56,3 +57,4 @@ app.get('/feedback', function (req, res) {
 app.listen(8080, () => {
 	console.log("The server is now running on Port 8080");
 });
+

@@ -39,7 +39,16 @@ public class EstudiantesApplication implements CommandLineRunner {
         } //Fin ciclo while
     }
     
-
+    private void mostrarMenu(){
+    //logger.info(nl);
+    logger.info("******* Sistema de Estudiantes *******\n" + 
+            "1. Listar Estudiantes\n" + 
+            "2. Buscar Estudiante\n" + 
+            "3. Agregar Estudiante\n" + 
+            "4. Modificar Estudiante\n" + 
+            "5. Eliminar Estudiante\n" + 
+            "6. Salir\n" + "Elija una opcion: \n");
+    } //fin del metodo mostrarMenu
         
 
     

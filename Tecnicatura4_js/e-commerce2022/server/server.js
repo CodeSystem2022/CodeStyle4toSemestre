@@ -3,7 +3,6 @@ const app = express();
 const cors = require("cors");
 const mercadopago = require("mercadopago");
 const path = require("path");
-
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
 	access_token: "<ACCESS_TOKEN>",
@@ -12,13 +11,15 @@ mercadopago.configure({
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-//app.use(express.static("../../client/html-js"));
+
 app.use(express.static(path.join(__dirname, "../client")));
 app.use(cors());
-app.get("/", function (/*req, res*/) {
+
+app.get("/", function () {
 	//res.status(200).sendFile("index.html");
 	path.resolve(__dirname, "..", "client", "index.html");
 });
+
 
 app.post("/create_preference", (req, res) => {
 
@@ -31,9 +32,9 @@ app.post("/create_preference", (req, res) => {
 			}
 		],
 		back_urls: {
-			"success": "http://localhost:8080",
-			"failure": "http://localhost:8080",
-			"pending": "",
+			"success": "http://localhost:8080/feedback",
+			"failure": "http://localhost:8080/feedback",
+			"pending": "http://localhost:8080/feedback"
 		},
 		auto_return: "approved",
 	};

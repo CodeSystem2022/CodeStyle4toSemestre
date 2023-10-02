@@ -34,4 +34,12 @@ Repositorio de tareas cuarto semestre 2023 .
     <td>Sprint 3</td>
     <td>Florencia Oviedo</td>
   </tr>
+   <tr>
+     <td>Sprint 4</td>
+     <td>Martin Verstraeten</td>
+   </tr>
+   <tr>
+     <td>Sprint 5</td>
+     <td>Martin Verstraeten</td>
+   </tr>
   </table>

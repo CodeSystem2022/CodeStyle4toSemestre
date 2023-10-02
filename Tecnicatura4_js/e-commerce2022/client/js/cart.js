@@ -107,3 +107,71 @@ const displayCartCounter = () => {
     cartCounter.style.display = "none";
   }
 };
+ /* Dejo espacio para la tarea de Martin que viene antes*/
+
+ <div class="total-price">Total: ${total}</div>;
+<button class="btn-primary" id="checkout-btn"> go to checkout</button>;
+<div id="button-checkout"></div>;
+
+modalConatiner.append(modalFooter);
+
+
+
+//mp;
+const mercadopago = new MercadoPago("publi_key", {
+locale: "es-AR", // The most common are: 'pt-BR', 'es-AR' and 'en-US'
+});
+
+const checkoutButton = modalFooter.querySelector("#checkout-btn");
+
+
+checkoutButton.addEventListener("clik", function (){
+    checkoutButton.remove();
+
+    const orderData = {
+        quantity: 1,
+        description: "compra de ecommerce",
+        price: total,       
+    };
+    fetch("http://localhost:8080/create_preference",{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderData),
+    })
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(preference) {
+        return response.json();
+})
+.catch(function(){
+    alert("Unexpected error");
+});
+});
+
+/*Fer 6 - Ingresar token y public_key*/
+function createCheckoutButton(preferenceId){
+  // Initialize the checkout
+  const bricksBuilder = mercadopago.bricks();
+
+  const renderComponent = async (bricksBuilder) => {
+      // if (window.checkoutButton) checkoutButton.unmount();
+
+      await bricksBuilder.create(
+          "wallet",
+          "button-checkout", // class/id where the payment button will be displayed
+          {
+              initialization: {
+                  preferenceId:preferenceId
+              },
+              callbacks: {
+                  onError: (error) => console.error(error),
+              }            
+          }
+
+
+      )
+  }
+}

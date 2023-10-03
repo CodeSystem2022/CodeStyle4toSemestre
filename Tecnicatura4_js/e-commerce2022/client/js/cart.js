@@ -75,12 +75,10 @@ const displayCart = () => {
   const total = cart.reduce((acc, el) => acc + el.price * el.quanty, 0);
 
   const modalFooter = document.createElement("div");
-  modalFooter.className = "modal-footer";
-  modalFooter.innerHTML = `
-<div class="total-price">Total: ${total} </div> 
+  
+const checkoutButton = modalFooter.querySelector("#checkout-btn");
 
-  `;
-  modalContainer.append(modalFooter);
+
 }else{
   const modalText = document.createElement("h2");
   modalText.className = "modal-body";
@@ -109,21 +107,21 @@ const displayCartCounter = () => {
 };
  /* Dejo espacio para la tarea de Martin que viene antes*/
 
- <div class="total-price">Total: ${total}</div>;
-<button class="btn-primary" id="checkout-btn"> go to checkout</button>;
-<div id="button-checkout"></div>;
+ modalFooter.className = "modal-footer";
+ modalFooter.innerHTML = `
+ <div class="total-price">Total: ${total} </div> 
+ <button class="btn-primary" id="checkout-btn"> go to checkout</button>
+ <div id="button-checkout"></div>
+ `;
 
 modalConatiner.append(modalFooter);
 
-
-
 //mp;
-const mercadopago = new MercadoPago("publi_key", {
+const mercadopago = new MercadoPago("My_public_key", {
 locale: "es-AR", // The most common are: 'pt-BR', 'es-AR' and 'en-US'
 });
 
 const checkoutButton = modalFooter.querySelector("#checkout-btn");
-
 
 checkoutButton.addEventListener("clik", function (){
     checkoutButton.remove();

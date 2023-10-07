@@ -22,7 +22,7 @@
         </encoder>
     </appender>
 
-    <!-- Logging levels are, in order of precedence -> TRACE, DEBUG, INFO, WARN and ERROR -->
+    <!-- Logging levels are, in order of precedence -> TRACE, DEBUG, INFO,  WARN and ERROR -->
     <root level="info">
         <appender-ref ref="STDOUT"/>
     </root>

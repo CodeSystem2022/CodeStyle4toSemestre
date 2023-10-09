@@ -42,4 +42,12 @@ Repositorio de tareas cuarto semestre 2023 .
      <td>Sprint 5</td>
      <td>Martin Verstraeten</td>
    </tr>
+   <tr>
+     <td>Sprint 6</td>
+     <td>Fernando Rojas</td>
+   </tr>
+   <tr>
+     <td>Sprint 7</td>
+     <td>Fernando Rojas</td>
+   </tr>
   </table>

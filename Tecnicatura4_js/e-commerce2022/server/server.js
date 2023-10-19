@@ -2,19 +2,22 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mercadopago = require("mercadopago");
-
+const path = require("path");
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
-	access_token: "<ACCESS_TOKEN>",
+	access_token: "MiTokenAccess",
 });
 
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static("../../client/html-js"));
+
+app.use(express.static(path.join(__dirname, "../client")));
 app.use(cors());
-app.get("/", function (req, res) {
-	res.status(200).sendFile("index.html");
+
+app.get("/", function () {
+	//res.status(200).sendFile("index.html");
+	path.resolve(__dirname, "..", "client", "index.html");
 });
 
 
@@ -57,4 +60,3 @@ app.get('/feedback', function (req, res) {
 app.listen(8080, () => {
 	console.log("The server is now running on Port 8080");
 });
-

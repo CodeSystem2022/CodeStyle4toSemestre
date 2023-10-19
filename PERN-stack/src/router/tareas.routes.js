@@ -1,15 +1,18 @@
-import { Router } from 'express'
+import Router from 'express-promise-router'
+import { actualizarTarea, crearTarea, eliminarTarea, listarTareas } from '../controllers/tareas.controller.js';
+import { listarTarea } from '../controllers/tareas.controller.js';
 
-const router =Router()
 
-router.get('/tareas', (req, res) => res.send('obteniendo tareas'));
+const router =Router();
 
-router.get('/tareas/:id', (req, res) =>res.send('obteniendo tareas'));
+router.get('/tareas', listarTareas);
 
-router.post('/tareas', (req, res) => res.send('creando tarea'));
+router.get('/tareas/:id', listarTarea);
 
-router.put('/tareas/:id', (req, res) => res.send('actualizando tarea unica'));
+router.post('/tareas', crearTarea);
 
-router.delete('/tareas/:id', (req, res) => res.send('eliminando tarea'));
+router.put('/tareas/:id', actualizarTarea );
+
+router.delete('/tareas/:id', eliminarTarea );
 
 export default router;

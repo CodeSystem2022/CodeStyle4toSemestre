@@ -11,7 +11,7 @@ export const crearTarea = async(req, res) => {
     try {   const {rows} = await pool.query('INSERT INTO tareas (titulo, descripcion) VALUES ($1, $2', [titulo,descripcion]);
     console.log(rows);
     res.send('creando tarea');
-    } catch (error;) {
+    } catch (error) {
         console.log("algo salio mal");
     }
 

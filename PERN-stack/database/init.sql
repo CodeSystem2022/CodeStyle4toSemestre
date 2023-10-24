@@ -3,7 +3,6 @@ CREATE TABLE tareas (
     titulo VARCHAR(255) UNIQUE NOT NULL,
     descripcion TEXT
 );
-
 CREATE TABLE usuarios (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255)  NOT NULL,

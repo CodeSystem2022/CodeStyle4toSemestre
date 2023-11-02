@@ -58,4 +58,9 @@ Repositorio de tareas cuarto semestre 2023 .
      <td>Sprint 9</td>
      <td>Fernando Rojas</td>
    </tr>
+    <tr>
+     <td>Sprint 10</td>
+     <td>Fernando Rojas</td>
+   </tr>
+   
   </table>

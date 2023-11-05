@@ -8,4 +8,4 @@ cd game
 python3 main.py
 ```
 
-Y a jugar
+Y a jugar!

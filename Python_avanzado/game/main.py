@@ -76,7 +76,7 @@ def run_game():
         if user_wins == 2:
             print('==========================')
             print('El CAMPEON es el USUARIO')
-            print('-------------------------\n')
+            print('--------------------------\n')
             break
 
 

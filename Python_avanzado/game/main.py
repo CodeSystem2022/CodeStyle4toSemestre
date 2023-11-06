@@ -68,13 +68,13 @@ def run_game():
             user_option, computer_option, user_wins, computer_wins)
 
         if computer_wins == 2:
-            print('=========================')
+            print('==========================')
             print('El CAMPEON es el OPONENTE')
             print('-------------------------\n')
             break
 
         if user_wins == 2:
-            print('=========================')
+            print('==========================')
             print('El CAMPEON es el USUARIO')
             print('-------------------------\n')
             break

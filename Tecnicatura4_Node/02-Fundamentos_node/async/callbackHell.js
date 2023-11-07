@@ -20,7 +20,7 @@ function hablar(callbackHablar){
 }
 
 
-//--Proceso principal del callbackHell
+//--Proceso principal a utilizar en callbackHell --//
 console.log("Iniciando el proceso...");
  hola('Carlos', function(nombre) {
     hablar( function(){

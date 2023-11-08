@@ -12,6 +12,8 @@ import java.awt.*;
 public class LibroFrom extends JXFrame {
     LibroServicio libroServicio;
     private JPanel panel;
+    private JTable tablaLibros;
+    private DefaultTablemodel tablaModeloLibros;
 
 
     @Autowired
@@ -34,5 +36,12 @@ public class LibroFrom extends JXFrame {
         setLocation(x,y);
     }
 
+    private void createUIComponents(){
+       this.tablaModeloLibros = new DefaultTablemodel(0, 5);
+       String[] cabecera ={"id", "Libro", "Autor", "Precio", "Existencias"};
+       this.tablaModeloLibros.setColumnIdentifiers(cabecera);
+       //Instanciar el objeto de Jtable
+        this.tablaLibros = new Jtable(tablaModeloLibros)
+    }
 
 }

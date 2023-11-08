@@ -41,7 +41,7 @@ public class LibroFrom extends JXFrame {
        String[] cabecera ={"id", "Libro", "Autor", "Precio", "Existencias"};
        this.tablaModeloLibros.setColumnIdentifiers(cabecera);
        //Instanciar el objeto de Jtable
-        this.tablaLibros = new Jtable(tablaModeloLibros)
+        this.tablaLibros = new Jtable(tablaModeloLibros);
     }
 
 }

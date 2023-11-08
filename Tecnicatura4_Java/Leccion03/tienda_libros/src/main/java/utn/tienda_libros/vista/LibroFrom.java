@@ -42,6 +42,25 @@ public class LibroFrom extends JXFrame {
        this.tablaModeloLibros.setColumnIdentifiers(cabecera);
        //Instanciar el objeto de Jtable
         this.tablaLibros = new Jtable(tablaModeloLibros);
+        listarLibros();
     }
 
+    private void listarLibros(){
+        // Limpiar la tabla
+        tablaModeloLibros.setRowCount(0);
+        //Obtener los libros de la BD
+        var libros = libroServicio.listarLibros();
+        // Iterar cada libro
+        libros.forEach((libro) { //Función Lambda
+                //Creamos cada registro par agregarlos a la tabla
+                Object [] renglonLibro = {
+                libro.getIDLibro(),
+                libro.getNombreLibro(),
+                libro.getAutor(),
+                libro.getPrecio(),
+                libro.getExistencia,
+            };
+            this.tablaModeloLibros.addRow(renglonLibro);
+        });
+    }
 }

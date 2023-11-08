@@ -6,12 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import utn.tienda_libros.servicio.LibroServicio;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 @Component
 public class LibroFrom extends JXFrame {
     LibroServicio libroServicio;
     private JPanel panel;
+    private JTextField libroTexto;
+    private JTextField autorTexto;
+    private JTextField precioTexto;
+    private JTextField existenciasTexto;
+    private JButton agregarButton;
     private JTable tablaLibros;
     private DefaultTablemodel tablaModeloLibros;
 
@@ -21,6 +29,9 @@ public class LibroFrom extends JXFrame {
         this.libroServicio = libroServicio;
         iniciarForma();
 
+        agregarButton.addActionListener(e -> {
+
+        });
     }
 
     private void iniciarForma(){

@@ -49,7 +49,38 @@ public class LibroFrom extends JXFrame {
         //Leer los valores del formulario
         if(libroTexto.getText().equals("")){
             mostrarMensaje("Ingresqa el nombre del libro");
+            libroTexto.requestFocusInWindow();
+            return;
         }
+        var nombreLibro = libroTexto.getText();
+        var autor = autorTexto.getText();
+        var precio = Double.parseDouble(precioTexto.getText());
+        var existencias = Integer.parseInt(existenciasTexto.getText());
+        // Creamos el obejto del libro
+        var libro = new Libro(null, nombreLibro, autor, precio, existencias);
+        //libro.setNombreLibro(nombreLibro);
+        //libro.setAutor(autor);
+        //libro.stPrecio(precio);
+        //libro.setExistencias(existencias);
+        this.libroServicio.guardarLibro(libro);
+        mostrarMensaje(("Se agrego el libro..."));
+        limpiarFormulario();
+        listarLibros();
+    }
+
+    private void limpiarFormulario(){
+        libroTexto.setText("");
+        autorTexto.setText("");
+        precioTexto.setText("");
+        existenciasTexto.setText("");
+    }
+
+
+
+
+
+    private void mostrarMensaje(String mensaje){
+        JOptionPane.showMesssageDialog(this, mensaje);
     }
 
     private void createUIComponents(){

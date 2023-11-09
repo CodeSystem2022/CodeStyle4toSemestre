@@ -21,6 +21,7 @@ public class LibroFrom extends JXFrame {
     private JTextField existenciasTexto;
     private JButton agregarButton;
     private JTable tablaLibros;
+    private JTextField idTexto;
     private DefaultTablemodel tablaModeloLibros;
 
 
@@ -30,6 +31,14 @@ public class LibroFrom extends JXFrame {
         iniciarForma();
 
         agregarButton.addActionListener(e -> agregarLibro());
+
+        tablaLibros.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseCliked(e);
+                cargarLibrosseleccionados)();
+            }
+        });
     }
 
     private void iniciarForma(){
@@ -52,6 +61,29 @@ public class LibroFrom extends JXFrame {
             libroTexto.requestFocusInWindow();
             return;
         }
+    private void cargarLibroSeleccionado(){
+        // Los indices de las columnas inician en 0.
+        var renglon = tablaLibros.getSelectedRow();
+        if(renglon != -1){
+            String idLibro = tablaLibros.getModel().getValuetAt(renglon, 0).toString();
+            idTexto.setText(idLibro);
+            String nombreLibro =
+                    tablaLibros.getModel().getValuetAt(renglon, 1).toString();
+            libroTexto.setText(nombreLibro);
+            String autor =
+                    tablaLibros.getModel().getValuetAt(renglon, 2).toString();
+            autorTexto.setText(autor);
+            String precio =
+                    tablaLibros.getModel().getValuetAt(renglon, 3).toString();
+            precioTexto.setText(precio);
+            String existencias =
+                    tablaLibros.getModel().getValuetAt(renglon, 4).toString();
+            existenciasTexto.setText(existencias);
+
+        }
+    }
+
+
         var nombreLibro = libroTexto.getText();
         var autor = autorTexto.getText();
         var precio = Double.parseDouble(precioTexto.getText());
@@ -75,15 +107,13 @@ public class LibroFrom extends JXFrame {
         existenciasTexto.setText("");
     }
 
-
-
-
-
     private void mostrarMensaje(String mensaje){
         JOptionPane.showMesssageDialog(this, mensaje);
     }
 
     private void createUIComponents(){
+       idTexto = new JTextField("");
+       idTexto.setVisible(false);
        this.tablaModeloLibros = new DefaultTablemodel(0, 5);
        String[] cabecera ={"id", "Libro", "Autor", "Precio", "Existencias"};
        this.tablaModeloLibros.setColumnIdentifiers(cabecera);

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c715810-f928-4721-8c3f-fdfd747973f1" name="Changes" comment="" />
+    <list default="true" id="9c715810-f928-4721-8c3f-fdfd747973f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/vista/LibroFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/vista/LibroFrom.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +29,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "678",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "FerRojas",
     "last_opened_file_path": "C:/Users/FerRojas/CodeStyle4toSemestre/Tecnicatura4_Java/Leccion03",
@@ -46,6 +50,7 @@
       <updated>1699407735113</updated>
       <workItem from="1699407736921" duration="34000" />
       <workItem from="1699494390756" duration="2116000" />
+      <workItem from="1699570924207" duration="1865000" />
     </task>
     <servers />
   </component>

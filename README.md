@@ -62,5 +62,17 @@ Repositorio de tareas cuarto semestre 2023 .
      <td>Sprint 10</td>
      <td>Fernando Rojas</td>
    </tr>
-   
+    <tr>
+     <td>Sprint 11</td>
+     <td>Gabriela Silva</td>
+   </tr>
+   <tr>
+     <td>Sprint 12</td>
+     <td>Gabriela Silva</td>
+   </tr>
+   <tr>
+     <td>Sprint 13</td>
+     <td>Gabriela Silva</td>
+   </tr>
+   <tr>
   </table>

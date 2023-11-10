@@ -160,11 +160,20 @@ public class LibroFrom extends JXFrame {
     private void createUIComponents(){
        idTexto = new JTextField("");
        idTexto.setVisible(false);
-       this.tablaModeloLibros = new DefaultTablemodel(0, 5);
+       this.tablaModeloLibros = new DefaultTablemodel(0, 5){
+           @Override
+           public boolean isCellEditable(int row, int colum){
+               return false;
+           }
+
+
+       };
        String[] cabecera ={"id", "Libro", "Autor", "Precio", "Existencias"};
        this.tablaModeloLibros.setColumnIdentifiers(cabecera);
        //Instanciar el objeto de Jtable
         this.tablaLibros = new Jtable(tablaModeloLibros);
+        //Evitamos que se seleccionen varios registros
+        tablaLibros.setSelectionModel(ListSelectionModel.SINGLE_SELECTION);
         listarLibros();
     }
 
